@@ -8,7 +8,6 @@ export default function Header_website() {
         if (typeof window !== 'undefined') {
             const scrollView = () => {
                 if (window.scrollY > 100) {
-                    console.log('first')
                     refHeader?.current?.classList?.add('animate-[animationScrollYHeader_1s]', 'shadow-2xl')
                 }
                 else {
@@ -20,7 +19,8 @@ export default function Header_website() {
                 window.removeEventListener('scroll', scrollView)
             }
         }
-    }, [])
+    }, []);
+    console.count('Cpn: header. Re-render')
 
     const arr_menu = [
         {
